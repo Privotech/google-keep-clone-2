@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body style="padding-top: 200px; background-image: linear-gradient(to left, rgb(87, 42, 49), rgb(201, 56, 201), rgb(163, 224, 19), rgb(117, 133, 133));">
+    <div class="container container-fluid col-lg-4 col-8 p-lg-5 p-2  text-center shadow-lg mt-3 bg-warning-subtle rounded-5" style="height: 500px;">
+        <h2 class="fs-1 text-warning fw-bolder">Welcome to our sign up page</h2>
+        <input class="d-grid w-100 rounded-3 border-danger-subtle p-2 bg-warning text-danger mt-5 align-text-bottom" type="text" id="emailAddress"
+            placeholder="">
+        <input class="d-grid w-100 rounded-3 border-danger-subtle p-2 bg-warning text-danger mt-5 mb-4 align-text-bottom" type="text"
+            id="passWord" placeholder="">
+        <button class="w-50 rounded-3 border-black border-3 bg-dark text-white fs-5 fw-bolder text-capitalize mt-3" onclick="signUp()">sign up
+        </button>
+        <span class="d-block text-capitalize fs-5 fw-bold mt-3 mb-5">don't have an account sign up <a
+                href="sign up.html">here</a></span>
+    </div>
+</body>
+<script>
+    function signUp () {
+        const email = document.getElementById("emailAddress").value;
+        const password = document.getElementById("passWord").value;
+        window.location.href = "dashbord.html";
+
+        if (email === "" || password === "") {
+            alert("Please fill in all fields.");
+        } else {
+            console.log("Email:", email);
+            console.log("Password:", password);
+            alert("Sign up successful!"); 
+        
+    }      }
+</script>
+<script src="bootstrap.js"></script>
+
+</html>
